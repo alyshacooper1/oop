@@ -1,12 +1,12 @@
 import CoinClass as c
-
+# importing the name of the file (not class name) and give alias (c)
 
 # The main function.
 def main():
-       # Create an object from the Coin class.
+       # Create an object from calling the Coin class.
        my_coin = c.Coin()   # this creates an instance called 'my_coin' of the class 'Coin()'
 
-       # Display the side of the coin that is facing up.
+       # Display the side of the coin that is facing up.  # call the object NOT the class
        print('This side is up:', my_coin.get_sideup())    # notice you do not have to supply the argument/parameter
 
        # Toss the coin.

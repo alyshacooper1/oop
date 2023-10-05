@@ -11,7 +11,7 @@ class BankAccount:
         self.balance = bal
 
       # The deposit method makes a deposit into the
-      # account.
+      # account
 
     def deposit(self, amount):
         self.balance += amount
@@ -20,15 +20,19 @@ class BankAccount:
       # from the account.
 
     def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= abs(amount)
+        else:
+            print('Error: Insufficient Funds')
 
 
       # The get_balance method returns the
       # account balance.
 
     def get_balance(self):
-        return self.balance
+        return self.balance # accessory 
 
 
 
     def __str__(self):
-        return 'The balance is $' + format(self.__balance, ',.2f')
+        return 'The balance is $' + format(self.balance, ',.2f')
